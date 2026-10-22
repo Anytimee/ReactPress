@@ -1,0 +1,25 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "types": ["vite/client", "node"],
+    "jsx": "react-jsx",
+    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "@reactpress/types": ["../../packages/types/src/index.ts"],
+      "@reactpress/ui": ["../../packages/ui/src/index.ts"],
+      "@reactpress/ui/*": ["../../packages/ui/src/*"],
+      "@reactpress/blocks": ["../../packages/blocks/src/index.ts"],
+      "@reactpress/blocks/*": ["../../packages/blocks/src/*"]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "pages/**/*.ts",
+    "pages/**/*.tsx",
+    "renderer/**/*.tsx",
+    "vite.config.ts"
+  ]
+}

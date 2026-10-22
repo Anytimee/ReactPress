@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "@reactpress/types": ["packages/types/src/index.ts"],
+      "@reactpress/types/*": ["packages/types/src/*"],
+      "@reactpress/ui": ["packages/ui/src/index.ts"],
+      "@reactpress/ui/*": ["packages/ui/src/*"],
+      "@reactpress/blocks": ["packages/blocks/src/index.ts"],
+      "@reactpress/blocks/*": ["packages/blocks/src/*"]
+    }
+  },
+  "include": [],
+  "exclude": ["node_modules", "**/dist"]
+}

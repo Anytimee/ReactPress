@@ -1,0 +1,53 @@
+{
+  "name": "@reactpress/blocks",
+  "version": "1.0.0",
+  "private": true,
+  "description": "14 block content ReactPress: schema zod, registry, dan renderer SSR-safe.",
+  "license": "MIT",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "default": "./dist/cjs/index.js"
+    },
+    "./schema": {
+      "types": "./dist/types/schema.d.ts",
+      "import": "./dist/esm/schema.js",
+      "require": "./dist/cjs/schema.js",
+      "default": "./dist/cjs/schema.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "node ../../scripts/build-package.mjs",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "lint": "eslint \"src/**/*.{ts,tsx}\""
+  },
+  "dependencies": {
+    "@reactpress/types": "^1.0.0",
+    "@tiptap/core": "^2.11.5",
+    "@tiptap/extension-link": "^2.11.5",
+    "@tiptap/extension-placeholder": "^2.11.5",
+    "@tiptap/pm": "^2.11.5",
+    "@tiptap/react": "^2.11.5",
+    "@tiptap/starter-kit": "^2.11.5",
+    "isomorphic-dompurify": "^2.26.0",
+    "zod": "^3.24.1"
+  },
+  "peerDependencies": {
+    "react": "18.x",
+    "react-dom": "18.x"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "typescript": "^5.7.2"
+  }
+}

@@ -1,0 +1,58 @@
+/**
+ * ReactPress design tokens.
+ *
+ * Monokrom + 1 aksen. Tanpa gradient, tanpa warna ungu-biru, tanpa glassmorphism.
+ * Dipakai bersama oleh admin SPA dan situs publik supaya keduanya terasa satu keluarga.
+ */
+
+:root {
+  /* Warna */
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --ink: #111111;
+  --ink-2: #444444;
+  --muted: #6b6b6b;
+  --line: #e5e5e3;
+  --accent: #111111;
+  --danger: #c0362c;
+  --success: #2f6f4f;
+  --warning: #8a5a12;
+
+  /* Bentuk */
+  --radius: 8px;
+  --radius-sm: 6px;
+  --radius-pill: 999px;
+
+  /* Tipografi */
+  --font: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-size-body: 15px;
+  --line-height-body: 1.55;
+  --font-size-xs: 12px;
+  --font-size-sm: 13px;
+
+  /* Spasi (skala 4px) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+
+  /* Elevasi — maksimal 1px blur, tanpa warna tebal */
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.04);
+
+  /* Fokus */
+  --focus-outline: 2px solid var(--ink);
+  --focus-offset: 2px;
+
+  /* Ukuran komponen */
+  --control-height: 36px;
+  --control-height-sm: 32px;
+  --topbar-height: 48px;
+  --sidebar-width: 240px;
+  --inspector-width: 280px;
+  --rail-width: 48px;
+  --content-width: 720px;
+}

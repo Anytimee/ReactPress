@@ -1,0 +1,150 @@
+@import '@reactpress/ui/tokens.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--bg);
+    color: var(--ink);
+    font-family: var(--font);
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 650;
+    letter-spacing: -0.015em;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  ::selection {
+    background: var(--ink);
+    color: var(--surface);
+  }
+
+  :focus-visible {
+    outline: var(--focus-outline);
+    outline-offset: var(--focus-offset);
+  }
+}
+
+@layer components {
+  .rp-field {
+    @apply flex w-full flex-col gap-1;
+  }
+
+  .rp-label {
+    @apply text-xs font-medium text-ink-2;
+  }
+
+  .rp-surface {
+    @apply rounded border border-line bg-surface;
+  }
+
+  .rp-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: var(--line) transparent;
+  }
+}
+
+/* Tampilan blok di dalam editor & pratinjau. */
+.rp-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.rp-blocks > * {
+  min-width: 0;
+}
+
+.rp-blocks h1,
+.rp-blocks h2,
+.rp-blocks h3,
+.rp-blocks h4 {
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+}
+
+.rp-blocks p {
+  margin: 0;
+}
+
+.rp-blocks ul,
+.rp-blocks ol {
+  margin: 0;
+  padding-left: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.rp-blocks a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.rp-blocks blockquote {
+  margin: 0;
+  padding-left: 14px;
+  border-left: 2px solid var(--line);
+  color: var(--ink-2);
+}
+
+.rp-blocks pre {
+  margin: 0;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  overflow-x: auto;
+  font-family: var(--mono);
+  font-size: 13px;
+}
+
+.rp-blocks code {
+  font-family: var(--mono);
+  font-size: 0.92em;
+}
+
+.rp-blocks img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.rp-blocks table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.rp-blocks th,
+.rp-blocks td {
+  border: 1px solid var(--line);
+  padding: 6px 10px;
+  text-align: left;
+}
+
+/* Fix untuk Puck: pastikan seluruh chain parent punya tinggi 100% */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}

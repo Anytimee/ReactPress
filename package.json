@@ -1,0 +1,41 @@
+{
+  "name": "reactpress",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ReactPress — fullstack CMS (clone WordPress) 100% React, self-hosted, API sendiri.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build:packages && npm run build:apps",
+    "build:packages": "npm run build -w @reactpress/types -w @reactpress/ui -w @reactpress/blocks",
+    "build:apps": "npm run build -w @reactpress/admin -w @reactpress/web -w @reactpress/api",
+    "dev": "npm run build:packages && npm run dev:apps",
+    "dev:apps": "npm run dev -w @reactpress/api -w @reactpress/admin -w @reactpress/web --parallel",
+    "typecheck": "node scripts/typecheck.mjs",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "clean": "node scripts/clean.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "eslint": "^9.17.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.37.3",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "globals": "^15.14.0",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.2"
+  },
+  "dependencies": {
+    "@puckeditor/core": "^0.23.0"
+  }
+}
